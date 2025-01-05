@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Page with Iframe</title>
+    <style>
+        /* Style for the iframe container */
+        .iframe-container {
+            border: 10px solid #000; /* Thick border around the iframe */
+            display: inline-block;
+            padding: 5px; /* Optional padding between iframe and border */
+        }
+
+        /* Style for the iframe itself */
+        iframe {
+            width: 800px; /* Adjust width as needed */
+            height: 600px; /* Adjust height as needed */
+            border: none; /* Removes the iframe's default border */
+            overflow: hidden; /* Prevents scrolling */
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="iframe-container">
+        <iframe src="../main-storage/1v1-lol/" title="Game" scrolling="no"></iframe>
+    </div>
+</body>
+</html>
