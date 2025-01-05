@@ -25,3 +25,37 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Get the iframe and button elements
+        const iframe = document.getElementById('embed-frame');
+        const fullscreenButton = document.getElementById('fullscreen-btn');
+        const refreshButton = document.getElementById('refresh-btn');
+
+        // Fullscreen functionality
+        fullscreenButton.addEventListener('click', () => {
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            } else if (iframe.mozRequestFullScreen) { // Firefox
+                iframe.mozRequestFullScreen();
+            } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari, Opera
+                iframe.webkitRequestFullscreen();
+            } else if (iframe.msRequestFullscreen) { // IE/Edge
+                iframe.msRequestFullscreen();
+            }
+        });
+
+        // Refresh functionality
+        refreshButton.addEventListener('click', () => {
+            iframe.src = iframe.src;  // Reset the iframe's src to refresh it
+        });
+
+        // Optional: Handle fullscreen exit event
+        document.addEventListener('fullscreenchange', () => {
+            if (!document.fullscreenElement) {
+                console.log('Exited fullscreen mode');
+            }
+        });
+    </script>
+</body>
+</html>
