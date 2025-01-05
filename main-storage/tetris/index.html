@@ -1,0 +1,44 @@
+<!DOCTYPE html><html><head>
+    <title>Tetris</title>
+
+    <meta charset="utf-8">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimal-ui">
+
+    <meta name="application-name" content="Tetris">
+    <link rel="apple-touch-icon-precomposed" href="images/icon60.png">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/icon76.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/icon120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/icon152.png">
+    <link rel="icon" type="image/png" href="images/icon152.png">
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body oncontextmenu="return false">
+    <!-- SYNCHRONOUS SCRIPTS -->
+
+    <script type="application/javascript" language="JavaScript">
+        console.debug = function() {};
+        console.log = function() {};
+        console.warn = function() {};
+    </script>
+     <script>
+        window.Booster = {};
+        window.Booster.ready = function()
+        {
+            window.Booster.__initialized = true;
+        };
+    </script>
+    <script id="booster-api" type="text/javascript" src="js/api.js"></script>
+    <div class="loading" id="loading">Loading Tetris®</div>
+
+    <!-- GAME ENTRY POINT -->
+    <script src="js/game.min.js"></script>
+
+    <!-- CANVAS -->
+    <canvas id="game_background"></canvas>
+
+</body></html>
