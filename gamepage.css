@@ -4,7 +4,7 @@
     border-radius: 0.5vw;
     overflow: hidden;
     box-shadow: 0 0.208vw 0.417vw rgba(0, 0, 0, 0.1);
-    border: 0.104vw solid #ffffff;
+    border: 0.17vw solid #ffffff;
     margin-top: 4vw;
     margin-left: 7.292vw;
 }
@@ -19,7 +19,7 @@
 .bottom-div {
     display: flex;
     align-items: center;
-    background-color: rgba(30, 30, 30);
+    background-color: #000
     padding: 0.521vw;
     border-bottom-left-radius: 0.781vw;
     border-bottom-right-radius: 0.781vw;
