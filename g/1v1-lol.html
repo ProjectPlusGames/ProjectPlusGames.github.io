@@ -1,94 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/x-icon" href="/images/pizzalogo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-            flex-direction: column;
-        }
-
-        /* Title of the game at the top */
-        .game-title {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        /* Container for the iframe with thick borders */
-        .iframe-container {
-            position: relative;
-            display: inline-block;
-            border-top: 10px solid #000;
-            border-left: 10px solid #000;
-            border-right: 10px solid #000;
-            border-bottom: 20px solid #000; /* Thicker bottom border */
-        }
-
-        /* Style for the iframe itself */
-        iframe {
-            width: 800px;
-            height: 600px;
-            border: none;
-            display: block;
-            overflow: hidden;
-        }
-
-        /* Fullscreen button style */
-        .fullscreen-btn {
-            position: absolute;
-            bottom: 5px; /* Positioned inside the bottom border */
-            left: 50%;
-            transform: translateX(-50%); /* Centers the button horizontally */
-            background: url('https://www.svgrepo.com/show/343671/fullscreen.svg') no-repeat center center; /* Replace with your image URL */
-            background-size: contain;
-            width: 40px; /* Adjust width as needed */
-            height: 40px; /* Adjust height as needed */
-            border: none;
-            cursor: pointer;
-        }
-
-        /* Hover effect for the fullscreen button */
-        .fullscreen-btn:hover {
-            opacity: 0.8;
-        }
-    </style>
+    <title>The Pizza Edition - 1v1.LOL</title>
+    <link id="favicon" rel="icon" href="/jsload/favicon.js" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../gamepage.css">
+    <script src="/analytics.js"></script>
 </head>
 <body>
-    <!-- Game Title -->
-    <div class="game-title">My Awesome Game</div>
-
-    <!-- Wrapper to center the iframe container -->
-    <div class="iframe-container">
-        <!-- Iframe for the game -->
-        <iframe id="gameFrame" src="your-game-url-here.html" title="Game" scrolling="no"></iframe>
-
-        <!-- Fullscreen Button -->
-        <button class="fullscreen-btn" onclick="toggleFullscreen()"></button>
+    <div class="embed-container">
+        <iframe id="embed-frame" src="../main-storage/1v1-lol/"></iframe>
+        <div class="bottom-div">
+            <img src="/images/games/1v1lol-min.png" alt="Website Logo">
+            <div class="text-container">
+                <div class="website-name">1v1.lol</div>
+                <div class="developer-name">BY: JustPlay.LOL</div>
+            </div>
+            <div class="buttons-container">
+                <img id="refresh-btn" src="/images/refresh.png" alt="Refresh">
+                <img id="fullscreen-btn" src="/images/fullscreen2.png" alt="Fullscreen">
+            </div>
+        </div>
     </div>
-
-    <script>
-        // Function to toggle fullscreen mode
-        function toggleFullscreen() {
-            const iframe = document.getElementById('gameFrame');
-            if (iframe.requestFullscreen) {
-                iframe.requestFullscreen();
-            } else if (iframe.mozRequestFullScreen) { // Firefox
-                iframe.mozRequestFullScreen();
-            } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari, Opera
-                iframe.webkitRequestFullscreen();
-            } else if (iframe.msRequestFullscreen) { // IE/Edge
-                iframe.msRequestFullscreen();
-            }
-        }
-    </script>
-</body>
-</html>
