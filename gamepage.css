@@ -64,7 +64,7 @@ transition: transform 0.7s ease; /* Add transition for smooth rotation */
 height: 2.344vw;
 width: auto;
 cursor: pointer;
-transform: scale(1.1) rotate(7deg);
+transition: transform 0.2s ease;
 }
 
 #fullscreen-btn:hover {
