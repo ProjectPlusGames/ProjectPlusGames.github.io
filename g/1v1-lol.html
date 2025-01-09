@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="/images/pizzalogo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Plus Games</title>
+    <link id="favicon" rel="icon" href="/jsload/favicon.js" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../gamepage.css">
+    <script src="/analytics.js"></script>
+</head>
+<body>
+    <nav>
+        <img src="/images/logo.png" alt="logo">
+        <h1>PROJECT PLUS GAMES</h1>
+    </nav>
+    <div class="embed-container">
+        <iframe id="embed-frame" src="../main-storage/1v1-lol/"></iframe>
+        <div class="bottom-div">
+            <div class="text-container">
+                <div class="website-name"> 1v1.lol</div>
+            </div>
+            <div class="buttons-container">
+                <img id="refresh-btn" src="/images/refresh.png" alt="Refresh">
+                <img id="fullscreen-btn" src="/images/fullscreen.png" alt="Fullscreen">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get the iframe and button elements
+        const iframe = document.getElementById('embed-frame');
+        const fullscreenButton = document.getElementById('fullscreen-btn');
+        const refreshButton = document.getElementById('refresh-btn');
+
+        // Fullscreen functionality
+        fullscreenButton.addEventListener('click', () => {
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            } else if (iframe.mozRequestFullScreen) { // Firefox
+                iframe.mozRequestFullScreen();
+            } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari, Opera
+                iframe.webkitRequestFullscreen();
+            } else if (iframe.msRequestFullscreen) { // IE/Edge
+                iframe.msRequestFullscreen();
+            }
+        });
+
+        // Refresh functionality
+        refreshButton.addEventListener('click', () => {
+            iframe.src = iframe.src;  // Reset the iframe's src to refresh it
+        });
+
+        // Optional: Handle fullscreen exit event
+        document.addEventListener('fullscreenchange', () => {
+            if (!document.fullscreenElement) {
+                console.log('Exited fullscreen mode');
+            }
+        });
+    </script>
+</body>
+</html>
