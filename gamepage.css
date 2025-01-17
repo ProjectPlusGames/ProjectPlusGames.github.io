@@ -5,7 +5,7 @@
     overflow: hidden;
     box-shadow: 0 0.208vw 0.417vw rgba(0, 0, 0, 0.1);
     border: 0.17vw solid #ffffff;
-    margin: 4vw auto; /* Center the container horizontally */
+    margin: 4.5vw auto; /* Center the container horizontally */
 }
 
 .embed-container iframe {
